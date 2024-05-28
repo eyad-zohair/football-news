@@ -1,0 +1,107 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f5f5f5;
+  font-size: 16px;
+  min-width: 320px;
+  margin: 0;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+header.main-header {
+  position: sticky;
+  top: 0;
+  inset-inline: 0;
+  z-index: 2000;
+  background-color: #000;
+}
+header.main-header .top-nav {
+  height: 60px;
+  background-color: #000;
+  position: relative;
+  color: #fff;
+  border-bottom: 4px solid #f0705a;
+}
+header.main-header .top-nav .top-wrapper {
+  padding: 0 16px;
+  max-width: 1352px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row-reverse;
+}
+header.main-header .top-nav .top-wrapper img {
+  height: 52px;
+  width: 100px;
+}
+header.main-header .top-nav .top-wrapper .menu-icon {
+  margin: 20px 0;
+  width: 20px;
+  height: 14px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  margin-right: auto;
+}
+header.main-header .top-nav .top-wrapper .menu-icon span {
+  background-color: #fff;
+  height: 2px;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  transition: all 0.3s ease;
+}
+header.main-header .top-nav .top-wrapper .menu-icon span:first-child {
+  top: 0;
+}
+header.main-header .top-nav .top-wrapper .menu-icon span:nth-child(2) {
+  top: 6px;
+}
+header.main-header .top-nav .top-wrapper .menu-icon span:last-child {
+  top: 12px;
+}
+header.main-header .top-nav .top-wrapper .menu-icon.clicked span:nth-child(2) {
+  left: 30px;
+}
+header.main-header .top-nav .top-wrapper .menu-icon.clicked span:first-child, header.main-header .top-nav .top-wrapper .menu-icon.clicked span:last-child {
+  top: 6px;
+}
+header.main-header .top-nav .top-wrapper .menu-icon.clicked span:first-child {
+  transform: rotate(45deg);
+}
+header.main-header .top-nav .top-wrapper .menu-icon.clicked span:last-child {
+  transform: rotate(-45deg);
+}
+header.main-header .top-nav .top-wrapper ul {
+  list-style: none;
+  margin: 0;
+  z-index: -1;
+  position: fixed;
+  inset: 0;
+  padding: 24px 16px;
+  overflow: auto;
+  background-color: #252525;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out;
+  top: 60px;
+}
+header.main-header .top-nav .top-wrapper ul li a {
+  height: 60px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-weight: 700;
+  font-size: 18px;
+  color: white;
+  transition: 0.3s;
+}
+header.main-header .top-nav .top-wrapper ul li a:hover {
+  margin-left: 10px;
+}/*# sourceMappingURL=main.css.map */
