@@ -1,0 +1,125 @@
+@import "colors.scss";
+
+.latest-news {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  background-color: #252525;
+  padding: 10px 20px;
+  flex-direction: column;
+
+  @media (max-width: 767px) {
+    padding: 5px 5px;
+  }
+
+  .h1 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: start;
+
+    h1 {
+      font-size: 44px;
+      line-height: 48px;
+      font-weight: 400;
+      margin-inline-end: auto;
+      margin-block: 16px;
+      font-family: $header-font-family;
+      padding-inline-start: 0;
+
+      @media (min-width: 768px) {
+        font-size: 72px;
+        line-height: 76px;
+      }
+    }
+  }
+
+  ol {
+    display: grid;
+    gap: $columb-gap;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    width: 100%;
+    padding: 0;
+
+    li {
+      list-style: none;
+
+      article {
+        border-radius: 4px;
+        height: 100%;
+        background-color: $color-dark-grey;
+        color: $color-white;
+        position: relative;
+        min-height: auto;
+        flex-direction: column;
+        overflow: hidden;
+        display: flex;
+
+        .poster-wrapper {
+          pointer-events: all;
+          cursor: default;
+          font-size: 16px;
+
+          a {
+            color: currentcolor;
+            text-decoration: none;
+            cursor: pointer;
+
+            span {
+              position: relative;
+              display: block;
+              min-height: 260px;
+
+              img {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+
+      .content-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        height: 100%;
+        flex: 1 1 auto;
+        padding: 16px clamp(16px, 4%, 36px);
+
+        .content-body {
+          min-height: 130px;
+          display: flex;
+          gap: 16px;
+          flex-direction: column;
+          width: 100%;
+          position: relative;
+
+          a.team {
+            border: 2px solid white;
+            padding: 4px 8px;
+            width: fit-content;
+            font-size: 20px;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 2px;
+            color: white;
+          }
+
+          a.title {
+            color: white;
+            font-size: 20px;
+            font-weight: 600;
+          }
+
+          footer {
+            position: absolute;
+            bottom: 0;
+            font-size: 20px;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}

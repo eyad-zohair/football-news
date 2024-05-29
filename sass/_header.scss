@@ -19,7 +19,7 @@ header.main-header {
       max-width: 1352px;
       margin: 0 auto;
       display: flex;
-      flex-direction: row-reverse;
+      flex-direction: row;
 
       img {
         height: 52px;
@@ -35,7 +35,7 @@ header.main-header {
         overflow: hidden;
         background-color: rgba(0, 0, 0, 0);
         border: none;
-        margin-right: auto;
+        margin-left: auto;
 
         span {
           background-color: $color-white;

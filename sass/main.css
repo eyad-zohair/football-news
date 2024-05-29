@@ -14,6 +14,14 @@ a {
   text-decoration: none;
 }
 
+:first-child {
+  margin-top: 0;
+}
+
+:last-child {
+  margin-bottom: 0;
+}
+
 header.main-header {
   position: sticky;
   top: 0;
@@ -33,7 +41,7 @@ header.main-header .top-nav .top-wrapper {
   max-width: 1352px;
   margin: 0 auto;
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
 }
 header.main-header .top-nav .top-wrapper img {
   height: 52px;
@@ -48,7 +56,7 @@ header.main-header .top-nav .top-wrapper .menu-icon {
   overflow: hidden;
   background-color: rgba(0, 0, 0, 0);
   border: none;
-  margin-right: auto;
+  margin-left: auto;
 }
 header.main-header .top-nav .top-wrapper .menu-icon span {
   background-color: #fff;
@@ -104,4 +112,117 @@ header.main-header .top-nav .top-wrapper ul li a {
 }
 header.main-header .top-nav .top-wrapper ul li a:hover {
   margin-left: 10px;
+}
+
+.latest-news {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  background-color: #252525;
+  padding: 10px 20px;
+  flex-direction: column;
+}
+@media (max-width: 767px) {
+  .latest-news {
+    padding: 5px 5px;
+  }
+}
+.latest-news .h1 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: start;
+}
+.latest-news .h1 h1 {
+  font-size: 44px;
+  line-height: 48px;
+  font-weight: 400;
+  margin-inline-end: auto;
+  margin-block: 16px;
+  font-family: "Panenka", "Panenka-fallback", sans-serif;
+  padding-inline-start: 0;
+}
+@media (min-width: 768px) {
+  .latest-news .h1 h1 {
+    font-size: 72px;
+    line-height: 76px;
+  }
+}
+.latest-news ol {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  width: 100%;
+  padding: 0;
+}
+.latest-news ol li {
+  list-style: none;
+}
+.latest-news ol li article {
+  border-radius: 4px;
+  height: 100%;
+  background-color: #333;
+  color: #fff;
+  position: relative;
+  min-height: auto;
+  flex-direction: column;
+  overflow: hidden;
+  display: flex;
+}
+.latest-news ol li article .poster-wrapper {
+  pointer-events: all;
+  cursor: default;
+  font-size: 16px;
+}
+.latest-news ol li article .poster-wrapper a {
+  color: currentcolor;
+  text-decoration: none;
+  cursor: pointer;
+}
+.latest-news ol li article .poster-wrapper a span {
+  position: relative;
+  display: block;
+  min-height: 260px;
+}
+.latest-news ol li article .poster-wrapper a span img {
+  width: 100%;
+}
+.latest-news ol li .content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  height: 100%;
+  flex: 1 1 auto;
+  padding: 16px clamp(16px, 4%, 36px);
+}
+.latest-news ol li .content-wrapper .content-body {
+  min-height: 130px;
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+}
+.latest-news ol li .content-wrapper .content-body a.team {
+  border: 2px solid white;
+  padding: 4px 8px;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 2px;
+  color: white;
+}
+.latest-news ol li .content-wrapper .content-body a.title {
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+}
+.latest-news ol li .content-wrapper .content-body footer {
+  position: absolute;
+  bottom: 0;
+  font-size: 20px;
+  font-weight: bold;
 }/*# sourceMappingURL=main.css.map */
