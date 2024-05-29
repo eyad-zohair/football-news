@@ -1,0 +1,5 @@
+@import "./colors";
+.content {
+  min-height: calc(100vh - 60px);
+  background-color: $color-dark-grey-01;
+}

@@ -1,0 +1,39 @@
+@import "./colors";
+
+footer {
+  background-color: $black-color;
+  min-width: 320px;
+  padding: 16px;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .image {
+    img {
+      width: 128px;
+      margin: 22px 0;
+    }
+  }
+
+  .social {
+    display: flex;
+
+    a {
+      color: white;
+      padding: 7px;
+
+      &:not(:last-child) {
+        border-right: 1px solid $color-mid-grey;
+      }
+    }
+  }
+
+  .copy-right {
+    font-size: 10px;
+    line-height: 1.6;
+    display: block;
+    margin-top: 20px;
+  }
+}

@@ -26,6 +26,42 @@ header.main-header {
         width: 100px;
       }
 
+      .login {
+        margin-left: auto;
+        margin-right: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        &::after {
+          content: "";
+          border-inline-end: 1px solid $color-mid-grey;
+          width: 1px;
+          height: 32px;
+          margin-inline-start: 8px;
+          font-size: 16px;
+          text-align: center;
+          white-space: nowrap;
+          font-weight: 600;
+          font-family: inherit;
+        }
+
+        a {
+          color: white;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 8px;
+          border-radius: 4px;
+          padding: 4px 12px;
+
+          h3 {
+            margin: 0;
+          }
+        }
+      }
+
       .menu-icon {
         margin: 20px 0;
         width: 20px;
@@ -35,7 +71,6 @@ header.main-header {
         overflow: hidden;
         background-color: rgba(0, 0, 0, 0);
         border: none;
-        margin-left: auto;
 
         span {
           background-color: $color-white;
