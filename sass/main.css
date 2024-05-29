@@ -263,7 +263,7 @@ header.main-header .top-nav .top-wrapper ul li a:hover {
   background-color: #252525;
 }
 
-footer {
+footer.footer {
   background-color: #000;
   min-width: 320px;
   padding: 16px;
@@ -273,21 +273,21 @@ footer {
   align-items: center;
   flex-direction: column;
 }
-footer .image img {
+footer.footer .image img {
   width: 128px;
   margin: 22px 0;
 }
-footer .social {
+footer.footer .social {
   display: flex;
 }
-footer .social a {
+footer.footer .social a {
   color: white;
   padding: 7px;
 }
-footer .social a:not(:last-child) {
+footer.footer .social a:not(:last-child) {
   border-right: 1px solid #767676;
 }
-footer .copy-right {
+footer.footer .copy-right {
   font-size: 10px;
   line-height: 1.6;
   display: block;
